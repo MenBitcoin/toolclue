@@ -15,7 +15,6 @@
     gtag('js', new Date());
     gtag('config', 'G-TONTRACKID');
   </script>
-  <!-- Yandex Metrica -->
   <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){
       m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -29,8 +28,6 @@
     });
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/96258171" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
-  <!-- Hotjar Tracking Code -->
   <script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -46,128 +43,95 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f7f7f7;
+      background: #f2f2f2;
       color: #333;
-      text-align: center;
     }
     header {
-      background: #111;
+      background: linear-gradient(135deg, #000428, #004e92);
       color: #fff;
-      padding: 30px 20px;
+      padding: 30px;
+      text-align: center;
     }
     h1 {
       margin: 0;
-      font-size: 2em;
     }
-    h2 {
-      font-weight: normal;
-      color: #bbb;
-    }
-    .content {
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 0 auto;
       padding: 40px 20px;
+      gap: 40px;
     }
-    .button {
-      display: inline-block;
-      background: #007aff;
-      color: white;
-      padding: 12px 25px;
+    .main {
+      flex: 3;
+    }
+    .sidebar {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .qr-section, .stats-section {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
       border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.2em;
-      margin: 20px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-    .qr-section, .ad-section {
-      margin-top: 40px;
-    }
-    .qr-section img {
-      width: 200px;
-      margin-bottom: 10px;
-    }
-    .qr-copy {
-      margin-top: 10px;
-      cursor: pointer;
-      color: #007aff;
-      text-decoration: underline;
-    }
-    .ad-slot {
-      margin: 30px auto;
-      max-width: 728px;
+    .qr img {
+      width: 100%;
+      max-width: 200px;
+      margin: 10px 0;
     }
     footer {
-      background: #222;
-      color: #888;
-      padding: 20px;
-      font-size: 0.9em;
+      text-align: center;
+      padding: 30px;
+      background: #111;
+      color: #aaa;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>ToolClue.com</h1>
-    <h2>Проект группы компаний BIGOR</h2>
+    <h1>ToolClue.com — рекламная площадка BIGOR</h1>
   </header>
-
-  <div class="content">
-    <p><strong>Сайт открыт для сотрудничества. Реклама, партнёрство, покупка домена – пишите.</strong></p>
-    <a class="button" href="https://t.me/citizenkaz" target="_blank">Разместить рекламу</a>
-
-    <div class="ad-slot">
-      <!-- Ad Block 1 -->
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="pub-1860980619751723"
-           data-ad-slot="1111111111"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <div class="container">
+    <div class="main">
+      <p><strong>Рекламное место на ToolClue доступно для размещения. Стоимость от 3000 ₸ в неделю.</strong></p>
+      <a href="https://t.me/citizenkaz" target="_blank">Связаться в Telegram</a>
     </div>
-
-    <div class="qr-section">
-      <h3>Оплата через TON</h3>
-      <img src="qr-ton.png" alt="QR для TON оплаты">
-      <p>TON-кошелёк:<br><strong id="ton-wallet">UQAihfSHPlzvWm_TwN-9MGN8Znhg_DB_WPtZgnuXgnnXf_-l</strong></p>
-      <div class="qr-copy" onclick="copyTON()">Скопировать адрес</div>
-    </div>
-
-    <div class="ad-slot">
-      <!-- Ad Block 2 -->
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="pub-1860980619751723"
-           data-ad-slot="2222222222"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
-    <div class="ad-section">
-      <h3>Предложение для рекламодателей</h3>
-      <p>Вы можете разместить свой баннер, ссылку или партнёрскую интеграцию на этой площадке.</p>
-      <p><strong>Стоимость размещения:</strong><br>
-      от 3 000 ₸ / неделя или 10 000 ₸ / месяц</p>
-      <a class="button" href="https://t.me/citizenkaz" target="_blank">Оставить заявку</a>
+    <div class="sidebar">
+      <div class="qr-section">
+        <h3>Оплата через TON</h3>
+        <div class="qr">
+          <img src="qr-ton.png" alt="QR для оплаты TON">
+          <p><strong id="ton-wallet">UQAihfSHPlzvWm_TwN-9MGN8Znhg_DB_WPtZgnuXgnnXf_-l</strong></p>
+          <button onclick="copyTON()">Скопировать адрес</button>
+        </div>
+      </div>
+      <div class="stats-section">
+        <h3>Статистика</h3>
+        <p>Посещений: <span id="visits">0</span></p>
+      </div>
     </div>
   </div>
-
   <footer>
-    &copy; BIGOR, <span id="year"></span>. Все права защищены.
-  <div style="margin-top: 20px; font-size: 0.9em; color: #999;">Посещений: <span id="visits">…</span></div>
+    &copy; BIGOR <span id="year"></span> — Все права защищены.
   </footer>
-
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
     function copyTON() {
       const wallet = document.getElementById('ton-wallet').textContent;
       navigator.clipboard.writeText(wallet)
         .then(() => alert('TON-адрес скопирован'))
         .catch(() => alert('Не удалось скопировать'));
     }
-    // простой счётчик посещений через localStorage (не требует серверной части)
     let visits = localStorage.getItem('visit-count') || 0;
     visits++;
     localStorage.setItem('visit-count', visits);
     document.getElementById('visits').textContent = visits;
-</script>
+  </script>
 </body>
 </html>
