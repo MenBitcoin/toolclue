@@ -1,12 +1,7 @@
 [
   {
-    "name": "AutoTech",
-    "logo": "https://toolclue.com/partners/auto.svg",
-    "url": "https://autotech.kz"
-  },
-  {
-    "name": "MarketPro",
-    "logo": "https://toolclue.com/partners/market.svg",
-    "url": "https://marketpro.kz"
+    "name": "Юнис",
+    "logo": "partners/yunic.png",
+    "url": "https://yunis.kz"
   }
 ]
