@@ -118,7 +118,8 @@
     </div>
   </div>
   <footer>
-    &copy; BIGOR <span id="year"></span> — Все права защищены.
+    &copy; BIGOR <span id="year"></span> — Все права защищены.<br>
+    <a href="/privacy.html" style="color: #aaa;">Политика конфиденциальности</a>
   </footer>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -131,7 +132,8 @@
     let visits = localStorage.getItem('visit-count') || 0;
     visits++;
     localStorage.setItem('visit-count', visits);
-    document.getElementById('visits').textContent = visits;
+    const visitsEl = document.getElementById('visits');
+if (visitsEl) visitsEl.textContent = visits;
   </script>
 </body>
 </html>
